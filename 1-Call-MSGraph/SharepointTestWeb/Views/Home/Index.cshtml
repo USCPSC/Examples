@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+    <div id="app">
+    <div class="container">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        <form>
+            <div class="form">
+                <div class="form-group">
+                    <input v-model=fieldData.fields.Title type="text" class="form-control" placeholder="Title">
+                </div>
+                <div class="form-group">
+                    <input v-model=fieldData.fields.Organization type="text" class="form-control" placeholder="Organization">
+                </div>
+                <div class="form-group">
+                    <input v-model=fieldData.fields.Phone type="tel" class="form-control" placeholder="Phone">
+                </div>
+                <div class="form-group">
+                    <input v-model=fieldData.fields.Source type="text" class="form-control" placeholder="Source">
+                </div>
+                <div class="form-group">
+                    <input v-model=fieldData.fields.Email type="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input v-model=fieldData.fields.Message type="text" class="form-control" placeholder="Message">
+                </div>
+                <div class="form-group">
+                    <input v-model=fieldData.fields.Comments type="text" class="form-control" placeholder="Comments">
+                </div>
+            </div>
+            <button type="submit" v-on:click="send" class="btn btn-primary">Submit</button>
+        </form>
+
+        <h2>Request</h2>
+        <pre>{{fieldData}}</pre>
+         <h2>Response</h2>
+         <pre>{{responseM}}</pre>
+
+    </div>
+        </div>
+
